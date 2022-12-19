@@ -1,0 +1,313 @@
+*{ margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  /* outline: red solid 1px; */
+}
+
+  body{
+    font-family: "montserrat";
+    scroll-behavior: smooth;
+    background: white;
+    color: black;
+  }
+  nav{ 
+    background: rgb(247, 223, 186);
+    
+    height: 80px;
+    width: 100%;
+    }
+    
+    label.logo{ 
+      color: white;
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 100px;
+      font-weight: bold;
+    }
+  .menu {
+    float: right;
+    margin-right: 20px;  
+    }
+    .menu li{
+      display: inline-block;
+      line-height: 80px;
+      margin:0 5px;
+    } 
+    .menu li a{
+      color:white;
+      font-size: 17px;
+      padding: 7px 13px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+    a.act,a:hover{
+      background: wheat;
+      transition: .5s
+    }
+ .logo {
+    width: 15%;
+ }
+ #section1{
+  height: 100vh;
+  /* background-color: wheat; */
+  background-image: url("https://images.pexels.com/photos/942802/pexels-photo-942802.jpeg");
+  background-size: cover;
+  /* background-position: center; */
+ }
+ .iconmenu{
+  position: absolute;
+  width: 25px;
+  top: 28px;
+  right: 6px;
+  display: none;
+ }
+
+@media screen and (max-width:952px) {
+  .logo{
+  font-size:16px ;
+  padding-left: 50px;
+}
+  .menu  {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+  }
+  .iconmenu{
+    display: block;
+  }
+  .container {
+    display: none;
+  }
+  .logo{
+ display: none;
+  }
+}
+
+/* ------------------------------sliders---------------------------- */
+.container{
+  background-color: rgb(235, 221, 190);
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  transform: translate(-50%, -30%);
+  left:50%;
+  top: 50%;
+  border-radius: 10px;
+  padding: 50px;
+}
+.image-container{
+  position: relative;
+  left: 100px; 
+}
+  img{
+  position: absolute;
+  transform: translate(15%, -5%) ;
+  width: 220px;
+  height: 450px;
+  display: none;
+}
+  .active{
+  display: block;
+}
+.dot-container{
+  width: 250px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+button{
+  outline: none;
+  cursor: pointer;
+}
+.dot-container button{
+  height: 15px;
+  width: 50px;
+  border-radius: 10%;
+  margin-right: 16px;
+  border: 3px solid rgb(143, 107, 62);
+  background-color: transparent;
+}
+.dot-container button:nth-child(1){
+  background-color: rgb(175, 133, 80);
+}
+#prev,#next{
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-color: rgb(175, 133, 80);
+  color: white;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#prev{
+  left: 4px;
+}
+#next{
+  right: 4px;
+}
+
+/* ----------------------form----------------------------------- */
+
+.form{
+  background-image: url("https://images.pexels.com/photos/942802/pexels-photo-942802.jpeg");
+  background-size: cover;
+  display: flex;
+  justify-content: space-evenly;
+
+
+}
+#Json{
+  margin-top: 20px;
+  width: 40%;
+  border: 1px solid white;
+  background-color: rgb(238, 224, 197);
+ 
+}
+h1{
+  color: rgb(182, 159, 130);
+  font-size: 65px;
+  text-align: center;
+  margin: 60px 0 60px;
+}
+
+
+.form-style-1 {
+	margin:10px auto;
+	max-width: 400px;
+	padding: 20px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-1 li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-style-1 label{
+  color: bisque;
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+.form-style-1 input[type=text], 
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea, 
+ select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	/* -webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out; */
+	outline: none;	
+ }
+
+.form-style-1 .field-divided{
+	width: 49%;
+}
+
+.form-style-1 .field-long{
+	width: 100%;
+}
+.form-style-1 .field-select{
+	width: 100%;
+}
+.form-style-1 .field-textarea{
+	height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+.form-style-1 .required{
+	color:red;
+}
+/* ----------------------footer------------------ */
+.footer {
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
+  background-image: url("../images/subscribe.jpg");
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(54, 47, 38);
+}
+.footer .Container1 {
+  position: relative;
+}
+.footer img {
+  margin-bottom: 10px;
+}
+.footer p:not(.copyright) {
+  padding: 20px;
+  border-bottom: 2px solid white;
+  font-size: 30px;
+  width: fit-content;
+  margin: 10px auto;
+}
+.footer .social-icons {
+  padding: 20px 35px;
+font-size: 25px;
+}
+.footer .copyright {
+  margin-top: 10px;
+}
+
+.bi{
+  font-size: 30px;
+  cursor: pointer;
+}
+/* ----------------------------Cards---------------------------- */
+.cards{
+  background-color: bisque;
+  height: 50vh;
+}
+h3{
+  text-align: center;
+  font-size: 30px;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate( -20% ,-50%);
+}
