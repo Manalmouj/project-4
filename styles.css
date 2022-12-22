@@ -26,7 +26,9 @@
     }
   .menu {
     float: right;
-    margin-right: 20px;  
+    margin-right: 300px;  
+    display: flex;
+    font-weight: bold;
     }
     .menu li{
       display: inline-block;
@@ -34,14 +36,14 @@
       margin:0 5px;
     } 
     .menu li a{
-      color:white;
+      color:rgb(117, 101, 72);
       font-size: 17px;
       padding: 7px 13px;
       border-radius: 3px;
       text-transform: uppercase;
     }
     a.act,a:hover{
-      background: wheat;
+      background:beige;
       transition: .5s
     }
  .logo {
@@ -57,6 +59,7 @@
  .iconmenu{
   position: absolute;
   width: 25px;
+  height: 50px;
   top: 28px;
   right: 6px;
   display: none;
@@ -65,10 +68,10 @@
 @media screen and (max-width:952px) {
   .logo{
   font-size:16px ;
-  padding-left: 50px;
+  padding-left: 60px;
 }
   .menu  {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -76,7 +79,7 @@
     top:0;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px); */
   }
   .iconmenu{
     display: block;
@@ -84,9 +87,9 @@
   .container {
     display: none;
   }
-  .logo{
+  /* .logo{
  display: none;
-  }
+  } */
 }
 
 /* ------------------------------sliders---------------------------- */
@@ -105,7 +108,7 @@
   position: relative;
   left: 100px; 
 }
-  img{
+.img_slider{
   position: absolute;
   transform: translate(15%, -5%) ;
   width: 220px;
@@ -158,6 +161,38 @@ button{
 #next{
   right: 4px;
 }
+/* --------------------------------fetch--------------------------- */
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fffcfc;
+}
+#posts {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 10px;
+  text-align: center;
+  width: 80vw;
+  margin: 20px auto;
+}
+.post {
+  background: rgb(238, 224, 197);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.post__img {
+  width: 100%;
+}
+.post h4 {
+  margin: 10px;
+}
+.post p {
+  padding: 20px;
+}
+
+
+
 
 /* ----------------------form----------------------------------- */
 
